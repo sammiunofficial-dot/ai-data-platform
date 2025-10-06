@@ -8,12 +8,11 @@ const Header = ({ setRoute, openRequestModal }) => {
     { name: 'Explore Data', route: 'explore' },
     { name: 'Demo', route: 'demo' },
     { name: 'Publications', route: 'publications' },
-    { name: 'Fisheries', route: 'fisheries' },
-    { name: 'Ocean', route: 'ocean' },
-    { name: 'Taxonomy', route: 'taxonomy' },
+    { name: 'Fishing Zones', route: 'fisheries' },
+    { name: 'Oceanography', route: 'ocean' },
     { name: 'Otoliths', route: 'otoliths' },
     { name: 'eDNA', route: 'edna' },
-    { name: 'Futuretrends', route: 'futuretrends' },
+    // { name: 'Futuretrends', route: 'futuretrends' },
   ];
 
   return (
