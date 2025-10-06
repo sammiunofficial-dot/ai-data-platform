@@ -18,11 +18,11 @@ const HomePage = ({ setRoute }) => {
                         <button onClick={() => setRoute('explore')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#1193d4] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
                             <span className="truncate">Explore Data</span>
                         </button>
-                        <button onClick={()=> setRoute('Request Access')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
-                            <span className="truncate">Request Access</span>
+                        <button onClick={()=> setRoute('fisheries')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+                            <span className="truncate">Fishing Zone</span>
                         </button>
-                        <button onClick={() => setRoute('api-docs')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 border border-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#283339] transition-all">
-                            <span className="truncate">Docs</span>
+                        <button onClick={() => setRoute('publications')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 border border-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#283339] transition-all">
+                            <span className="truncate">Publications</span>
                         </button>
                         <button onClick={() => setRoute('demo')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 border border-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#283339] transition-all">
                             <span className="truncate">Demo</span>
@@ -31,34 +31,7 @@ const HomePage = ({ setRoute }) => {
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="py-20 bg-[#161c1e]">
-                <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-3 gap-12 text-center">
-                        <div className="flex flex-col items-center gap-4">
-                            <div className="text-[#1193d4] flex items-center justify-center rounded-full bg-[#283339] shrink-0 size-16">
-                                <DatabaseIcon />
-                            </div>
-                            <h3 className="text-xl font-bold">Unified Data</h3>
-                            <p className="text-[#9db0b9]">Integrate diverse datasets into a single, searchable platform.</p>
-                        </div>
-                        <div className="flex flex-col items-center gap-4">
-                            <div className="text-[#1193d4] flex items-center justify-center rounded-full bg-[#283339] shrink-0 size-16">
-                                <ChartIcon />
-                            </div>
-                            <h3 className="text-xl font-bold">Cross-Domain Analysis</h3>
-                            <p className="text-[#9db0b9]">Analyze data across oceanography, taxonomy, and genomics.</p>
-                        </div>
-                        <div className="flex flex-col items-center gap-4">
-                            <div className="text-[#1193d4] flex items-center justify-center rounded-full bg-[#283339] shrink-0 size-16">
-                                <SparkleIcon />
-                            </div>
-                            <h3 className="text-xl font-bold">AI-Enabled Insights</h3>
-                            <p className="text-[#9db0b9]">Leverage AI to uncover hidden patterns and insights in marine data.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
              {/* Stats and Search Section */}
             <section className="py-20">
@@ -94,6 +67,35 @@ const HomePage = ({ setRoute }) => {
                                 <input className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#1193d4] border-none bg-[#283339] h-full placeholder:text-[#9db0b9] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search by species name, station ID, or dataset..." />
                             </div>
                         </label>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Section */}
+            <section className="py-20 bg-[#161c1e]">
+                <div className="container mx-auto px-6">
+                    <div className="grid md:grid-cols-3 gap-12 text-center">
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="text-[#1193d4] flex items-center justify-center rounded-full bg-[#283339] shrink-0 size-16">
+                                <DatabaseIcon />
+                            </div>
+                            <h3 className="text-xl font-bold">Unified Data</h3>
+                            <p className="text-[#9db0b9]">Integrate diverse datasets into a single, searchable platform.</p>
+                        </div>
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="text-[#1193d4] flex items-center justify-center rounded-full bg-[#283339] shrink-0 size-16">
+                                <ChartIcon />
+                            </div>
+                            <h3 className="text-xl font-bold">Cross-Domain Analysis</h3>
+                            <p className="text-[#9db0b9]">Analyze data across oceanography, taxonomy, and genomics.</p>
+                        </div>
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="text-[#1193d4] flex items-center justify-center rounded-full bg-[#283339] shrink-0 size-16">
+                                <SparkleIcon />
+                            </div>
+                            <h3 className="text-xl font-bold">AI-Enabled Insights</h3>
+                            <p className="text-[#9db0b9]">Leverage AI to uncover hidden patterns and insights in marine data.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -134,19 +136,19 @@ const HomePage = ({ setRoute }) => {
                             <div className="flex flex-col gap-4 flex-1">
                                 <h3 className="text-xl font-bold">Oceanography</h3>
                                 <p className="text-[#9db0b9]">Explore oceanographic data including temperature, salinity, and currents.</p>
-                                <button className="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all">
+                                {/* <button className="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all">
                                     <span className="truncate">Explore</span>
-                                </button>
+                                </button> */}
                             </div>
                             <div className="w-full md:w-1/2 h-48 md:h-auto bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style={{ backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaCrIc9EyxA1HFBj79mln8NwbrUFdnZIUEDtwBveK6Bh7VZN37JKVogXdEKD4dQKpk395lXSkofLpEJ_wB7UZY0nYR7zzO-QYZpdSyGPMCwFafjmdbzy3DQEvRNkV3ahh5dmO7CiX1xJg-z03Lv4s3kvZL8El9d8hYjrdj0MroAmwgIsJj2qsZMWSmNQQzqoT45pZH10NAOTWnHWh4Qbi7mKeEi-jhT1OnFtoAF5FsXlImRIayqembqQA4sZqee3SSisX7T2wraHub")` }}></div>
                         </div>
                         <div className="flex flex-col md:flex-row items-stretch justify-between gap-6 rounded-lg bg-[#1c2327] p-6 shadow-lg">
                             <div className="flex flex-col gap-4 flex-1">
-                                <h3 className="text-xl font-bold">Taxonomy</h3>
+                                <h3 className="text-xl font-bold">Fishing Zones</h3>
                                 <p className="text-[#9db0b9]">Access taxonomic information on marine species, including classifications and distributions.</p>
-                                <button className="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all">
-                                    <span className="truncate">Explore</span>
-                                </button>
+                                <button onClick={()=> setRoute('fisheries')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+                            <span className="truncate">Fishing Zone</span>
+                        </button>
                             </div>
                             <div className="w-full md:w-1/2 h-48 md:h-auto bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style={{ backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAul3Qqk6-LNNsW4m_DS2UNLjoEOpZJAqtQy2vL_lNEJ_8x2S821fggDKELbcPo2_6OVn18d5bsB_qI1m68aKc1w4QzSkveBHg6W1QHJFIdEApvveAqL4gS5NTxMLQb0Z9kRgRL9U8yVXDpe_PNIUdCe5VJSE2EQjCvLcnJyE7gg3-Wy7W7J1ngP05NKvxDjfHYYeLOOWuNtrRW9x_oY-IH1vHJZ8RAVcLlhTDxAwlTpSmRaXCGSJGfMkCz4wKwbLuvHKhcQsS-blH")` }}></div>
                         </div>
@@ -154,9 +156,9 @@ const HomePage = ({ setRoute }) => {
                             <div className="flex flex-col gap-4 flex-1">
                                 <h3 className="text-xl font-bold">Otoliths</h3>
                                 <p className="text-[#9db0b9]">Analyze otolith data for fish age and growth studies.</p>
-                                <button className="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all">
-                                    <span className="truncate">Explore</span>
-                                </button>
+                                <button onClick={()=> setRoute('otoliths')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+                            <span className="truncate">Otoliths</span>
+                        </button>
                             </div>
                             <div className="w-full md:w-1/2 h-48 md:h-auto bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style={{ backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3hfc09Q4LVIy06kDRKPO3u91gF2QOK5fnuHVVaUZIexY4v3k-8sPYycN6G8Xph5Y22Isr5IHV0qJbNYueuxaWE3enRlocCDdv2QiP1kTJwnSg37IZuH4VwcBB5ULRjI7XvGY7hyKTkRhFpkRvBb0CRGlzfT-cYuXZfXCwr0FZ5kioskOI4KXRO9iD3_sQW3aO_eKmQ0kkXCLgoqtuqLtU5QIbSqAIRG5kP91DIWCniK6TAY-HGetHaprnQwJpBrPcuHpVRuCoLVuo")` }}></div>
                         </div>
@@ -164,9 +166,9 @@ const HomePage = ({ setRoute }) => {
                             <div className="flex flex-col gap-4 flex-1">
                                 <h3 className="text-xl font-bold">eDNA</h3>
                                 <p className="text-[#9db0b9]">Investigate environmental DNA data to understand species presence and biodiversity.</p>
-                                <button className="flex mt-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all">
-                                    <span className="truncate">Explore</span>
-                                </button>
+                                <button onClick={()=> setRoute('ocean')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+                            <span className="truncate">Fishing Zone</span>
+                        </button>
                             </div>
                             <div className="w-full md:w-1/2 h-48 md:h-auto bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style={{ backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZRYEoKhEQklaNj49ynqS28Mfkn_QO62UHvQn1xLfPTW67EyJHqd4rVveV8Basja1kkP-w1Mrk-ex3My93xARcyg8lQ7GO1l1qDh6FDQiBhUe6MQnOtoUd40sMl5Z22mtzlckkNWbbSzLxXV7WETN8XfgMZQz2UOYTOPMY-wsdQ-qYsGHEGd5vFUxqftHpUdjUfQDGqZ-0IKpkBpkBb3dundqHPljTKrK0P93nLrqE0uykrtBQhdir1h6HaNB_DGFZKz64yS4Ae1G4")` }}></div>
                         </div>
