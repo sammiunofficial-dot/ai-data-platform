@@ -22,7 +22,7 @@ const HomePage = ({ setRoute }) => {
                             <span className="truncate">Request Access</span>
                         </button>
                         <button onClick={() => setRoute('api-docs')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 border border-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#283339] transition-all">
-                            <span className="truncate">API Docs</span>
+                            <span className="truncate">Docs</span>
                         </button>
                         <button onClick={() => setRoute('demo')} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 border border-[#283339] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#283339] transition-all">
                             <span className="truncate">Demo</span>
