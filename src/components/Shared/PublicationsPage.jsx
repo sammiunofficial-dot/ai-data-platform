@@ -2,16 +2,55 @@ import React from 'react'
 
 const PublicationsPage = ({ isSection = false }) => {
     const publications = [
-        {
-            title: "A multi-faceted approach to understanding krill distribution",
-            authors: "Authors: A. Sharma, B. Patel, C. Singh. Published in Journal of Marine Science, 2023.",
-            imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRrsGck8ObbItoUS2wXO6-I_TpGnsl3MhN2adPVb8r3hebCRfleSCkh5ve1BCTVebg5mYSGAyJcfttNbnfUJWE8zqRWShxiaDUaCwliExsKzQCvnuDxsrb5xUqg9I08OJinbiBqwxh5ryBXZZPQQYxWwg8Ai2mcOUHEEPrANB1eR-FS4Pf22uB64Phe8Jex6fwe0RXXBH9xGfeEYLYaDYMG0d0T0CUcqzpbVQB9p8H-kPASMUCutdgNi7ORF_FqTABK3ZL_-X7W7S"
-        },
-        {
-            title: "Leveraging eDNA for Antarctic biodiversity monitoring",
-            authors: "Authors: D. Verma, E. Kapoor, F. Mishra. Published in Oceanography Research, 2024.",
-            imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDO2jMnuB7aVhZWpCCHe_RveV23_AZtfBXAASsBSAvBWotoSdSJGYq1uOlT39V2y0Z_8saEohbaIyAFHcx-9IOJBjonxqUBG0W2IKjt_HsudMP1jsot9JOMMsRmHDWRTvP6Kkt5yXgaAClXV_QBzwnmEnBBkuucpV-5D05yG2hsRRF5CYbkhFP5ASWn9fNDv_1FY2tF83QTZIN4Qnu6rtTP5vBpXgl8Q4NQ0JLhNVIFZ5yF2t7Kgzhxxg1DeoFmvQJhD-43IFQgM_u7"
-        }
+    {
+        title: "Environmental DNA (eDNA) dataset of foraminiferal diversity from mining-affected estuaries of Goa, India",
+        authors: "Authors: Marine Research Team, CSIR-NIO. Published in Data in Brief, 2024.",
+        imageUrl: "https://ars.els-cdn.com/content/image/1-s2.0-S2352340924005080-gr1.jpg",
+        link: "https://www.sciencedirect.com/science/article/pii/S2352340924005080"
+    },
+    {
+        title: "Unveiling diversity in inhabited and uninhabited reefs of the Lakshadweep archipelago, India using eDNA",
+        authors: "Authors: Reef Ecology Team, CMLRE. Published in Frontiers in Marine Science, 2025.",
+        imageUrl: "https://www.frontiersin.org/files/Articles/1592429/fmars-12-1592429-HTML-r1/image_m/fmars-12-1592429-g001.jpg",
+        link: "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2025.1592429/full"
+    },
+    {
+        title: "Validation and assessment of Potential Fishing Zone (PFZ) advisories along Kerala coast, South India",
+        authors: "Authors: CMFRI Research Team. Published in Indian Journal of Fisheries, 2024.",
+        imageUrl: "https://ars.els-cdn.com/content/image/1-s2.0-S0195925525001507-ga1.jpg",
+        link: "https://www.sciencedirect.com/science/article/abs/pii/S0195925525001507"
+    },
+    {
+        title: "Marine Data Services at National Oceanographic Data Centre-India: Supporting ocean services and research",
+        authors: "Authors: INCOIS Data Management Team. Published in Data Science Journal, 2018.",
+        imageUrl: "https://storage.googleapis.com/jnl-up-j-dsj-files/journals/1/articles/784/submission/proof/784-10-3969-1-17-20180510.png",
+        link: "http://datascience.codata.org/articles/10.5334/dsj-2018-011/galley/753/download/"
+    },
+    {
+        title: "Integrated Taxonomic Information System: Building marine biodiversity databases for Indian Ocean",
+        authors: "Authors: CMLRE Taxonomy Division. Published in CMLRE Technical Report, 2025.",
+        imageUrl: "https://www.cmlre.gov.in/sites/default/files/uploadfiles/Ascorhynchus_levissimus_Loman-1908.png",
+        link: "https://www.cmlre.gov.in/research-programs/completed-research-program/integrated-taxonomic-information-system"
+    },
+    {
+        title: "Animal Discoveries 2023: New Species and New Records from India",
+        authors: "Authors: Zoological Survey of India. Published in ZSI Compendium, 2023.",
+        imageUrl: "https://www.civilsdaily.com/wp-content/uploads/2024/07/makdi.jpg.webp",
+        link: "https://zsi.gov.in/uploads/documents/publications/hindi/Animal_Discoveries_2023_(2)_compressed2.pdf"
+    },
+    {
+        title: "Bridging the gap: The integration of eDNA techniques and traditional trawl surveys for marine biodiversity assessment",
+        authors: "Authors: Marine Ecology Research Group. Published in Frontiers in Marine Science, 2024.",
+        imageUrl: "https://www.frontiersin.org/files/Articles/1289589/fmars-11-1289589-HTML/image_m/fmars-11-1289589-g001.jpg",
+        link: "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2024.1289589/full"
+    },
+    {
+        title: "Satellite based potential fishing zone (PFZ) advisories: Impact assessment on fishing communities across Tamil Nadu and Puducherry",
+        authors: "Authors: INCOIS Fisheries Team. Published in INCOIS Research Papers, 2024.",
+        imageUrl: "https://incois.gov.in/images/services/pfz/SST.jpeg",
+        link: "https://incois.gov.in/MarineFisheries/PfzAdvisory"
+    }
+
     ];
 
     const WrapperComponent = isSection ? 'section' : 'div';
@@ -28,9 +67,14 @@ const PublicationsPage = ({ isSection = false }) => {
                             <div className="flex-1 flex flex-col gap-3">
                                 <h3 className="text-lg font-bold">{pub.title}</h3>
                                 <p className="text-sm text-[#9db0b9]">{pub.authors}</p>
-                                <button className="mt-auto flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all">
+                                <a 
+                                    href={pub.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-auto flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#283339] text-white text-sm font-medium leading-normal w-fit hover:bg-opacity-80 transition-all"
+                                >
                                     <span className="truncate">Read More</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     ))}
