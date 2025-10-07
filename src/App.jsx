@@ -7,6 +7,9 @@ import PlaceholderPage from "./components/Shared/PlaceholderPage";
 import Fisheries from "./pages/Fisheries";
 import RequestAccess from "./pages/RequestAccess";
 import ExploreData from "./pages/ExploreData";
+import OceanographyMap from "./pages/OceanographyMap";
+import EDNAAnalysisDashboard from "./pages/EDNAAnalysisDashboard";
+
 
 function App() {
   const [route, setRoute] = useState("home");
@@ -27,12 +30,11 @@ function App() {
       case "fisheries":
         return <Fisheries />;
       case "ocean":
-        return <PlaceholderPage title="Ocean Data" description="Explore ocean data and insights here." />;
-      case "otoliths":
-        return <PlaceholderPage title="Otoliths Data" description="Explore otoliths data and insights here." />;
+        return <OceanographyMap/>
       case "eDNA":
-        return <PlaceholderPage title="eDNA Data" description="Explore eDNA data and insights here." />;
-      // IMPORTANT: do NOT return RequestAccess here — keep the page rendering as normal (home or other)
+        return <EDNAAnalysisDashboard/>
+      case "otoliths":
+        return <EDNAAnalysisDashboard/>
       default:
         return <HomePage setRoute={setRoute} />;
     }
