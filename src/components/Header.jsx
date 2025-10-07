@@ -10,7 +10,7 @@ const Header = ({ setRoute, openRequestModal }) => {
     { name: 'Publications', route: 'publications' },
     { name: 'Fishing Zones', route: 'fisheries' },
     { name: 'Oceanography', route: 'ocean' },
-    { name: 'eDNA', route: 'otoliths' },
+    { name: 'eDna', route: 'otoliths' },
     { name: 'Otoliths', route: 'edna' },
     // { name: 'Futuretrends', route: 'futuretrends' },
   ];
